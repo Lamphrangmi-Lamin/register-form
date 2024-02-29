@@ -1,0 +1,7 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.gradient-background {
+    background-image: linear-gradient(to right, #652CD1, #121826);
+}
