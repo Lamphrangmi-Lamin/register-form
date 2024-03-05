@@ -35,10 +35,24 @@
         <h1>Which topics you are interested in?</h1>
 
         <form action="#">
-            <input type="text" id="name" value="Software Development">
-            <input type="text" id="name" value="User Experience">
-            <input type="text" id="name" value="Graphic Design">
-            <input type="submit" value="Continue">
+            <div class="option-bar">
+                <input type="radio" id="option1" name="option" value="Software Development">
+                <label for="option1">Software Development</label>
+            </div>
+            
+            <div class="option-bar">
+                <input type="radio" id="option2" name="option" value="User Experience">
+                <label for="option2">User Experience</label>
+            </div>
+
+            <div class="option-bar">
+                <input type="radio" id="option3" name="option" value="Graphic Design">
+                <label for="option3">Graphic Design</label>
+            </div>
+
+            <div class="button">
+                <button type="submit">Continue</button>
+            </div>
         </form>
     </div>
 

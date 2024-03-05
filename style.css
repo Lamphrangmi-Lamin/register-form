@@ -2,7 +2,7 @@
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-    /* color: #E5E7EB; */
+    box-sizing: border-box;
 }
 
 body {
@@ -14,18 +14,11 @@ body {
     row-gap: 2rem;
 }
 
-#step-2,
-#step-3 {
-    display: none;
-
-}
-
 #step-1,
 #step-2,
 #step-3 {
     color: #E5E7EB;
-    min-width: 65%;
-    /* min-height: 25rem; */
+    width: 80%;
     border: #4D5562 solid 1px;
     background-color: #212936;
     margin-top: 3rem;
@@ -34,15 +27,10 @@ body {
 }
 
 h1 {
-    /* text-align: center; */
     font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: 2.5rem;
 }
-
-/* .input-container {
-    width: 90%;
-} */
 
 label {
     color: #A1A1A9;
@@ -70,11 +58,10 @@ input:focus {
     border: solid 2.3px #845EEE;
 }
 
-#step-1 form {
+form {
     display: flex;
     flex-direction: column;
     row-gap: 1.8rem;
-    width: 94%;
 }
 
 
@@ -92,6 +79,29 @@ button {
     padding: 1rem;
     border-radius: 2rem;
     width: 9rem;
-    margin-left: 10%;
 }
 
+#step-2 .option-bar{
+    display: flex;
+}
+
+.option-bar input[type="radio"] {
+    visibility: hidden;
+    background-color: #4D5562;
+    width: 0px;
+}
+
+.option-bar label {
+    padding: 0;
+    margin: 0;
+    background-color: #4D5562;
+    color: #E5E7EB;
+    font-size: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .6rem;
+}
+
+.option-bar input[type="radio"]:checked + label {
+    background-color: #652CD1;
+}
