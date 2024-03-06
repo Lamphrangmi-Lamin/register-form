@@ -105,3 +105,29 @@ button {
 .option-bar input[type="radio"]:checked + label {
     background-color: #652CD1;
 }
+
+#step-3 p{
+    color: #A1A1A9;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+#step-3 span,
+#step-3 li{
+    color: #E5E7EB;
+    font-weight: 600;
+}
+
+#step-3 ul{
+    margin-left: 1.5rem;
+}
+
+.summary-content {
+    margin-bottom: 1.8rem;
+}
+
+#step-3 button{
+    display: block;
+    margin: auto;
+}
