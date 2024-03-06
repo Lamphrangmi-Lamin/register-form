@@ -12,6 +12,7 @@ body {
     justify-content: center;
     flex-direction: column;
     row-gap: 2rem;
+    height: 100vh;
 }
 
 #step-1,
@@ -21,7 +22,6 @@ body {
     width: 80%;
     border: #4D5562 solid 1px;
     background-color: #212936;
-    margin-top: 3rem;
     border-radius: .8rem;
     padding: 2.5rem;
 }
@@ -132,10 +132,10 @@ button {
     margin: auto;
 }
 
-/* #step-2,
+#step-2,
 #step-3 {
     display: none;
-} */
+}
 
 .stepper {
     display: flex;
