@@ -150,9 +150,8 @@ button {
     font-weight: 500;
 }
 .stepper .radio-wrapper{
-     /* Remove default styles */
-    width: .625rem; /* Initial width for unchecked state */
-    height: .625rem; /* Initial height for unchecked state */
+    width: .75rem;
+    height: .75rem;
     border-radius: 50%; /* Create circular radio buttons */
     margin-right: .5rem;
     display: flex;
