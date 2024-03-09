@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../src/output.css"></head>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Register Form</title>
+</head>
+
 <body>
     <div class="" id="step-1">
         <h1>Register</h1>
@@ -16,12 +18,12 @@
         <form action="#">
             <div class="input-container">
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Enter name">
+                <input type="text" id="name" placeholder="Enter name" required>
             </div>
 
             <div class="input-container">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="example@gmail.com">
+                <input type="email" id="email" placeholder="example@gmail.com" required>
             </div>
 
             <div class="button">
@@ -30,7 +32,7 @@
         </form>
     </div>
 
-    
+
     <div class="" id="step-2">
         <h1>Which topics you are interested in?</h1>
 
@@ -39,14 +41,14 @@
                 <input type="radio" id="option1" name="option" value="Software Development">
                 <label for="option1">Software Development</label>
             </div>
-            
+
             <div class="option-bar">
                 <input type="radio" id="option2" name="option" value="User Experience">
                 <label for="option2">User Experience</label>
             </div>
 
             <div class="option-bar">
-                <input type="radio" id="option3" name="option" value="Graphic Design">
+                <input type="radio" id="option3" name="option" value="Graphic Design" required>
                 <label for="option3">Graphic Design</label>
             </div>
 
@@ -60,18 +62,18 @@
     <div id="step-3">
         <h1>Summary</h1>
 
-            <div class="summary-content">
-                <p>Name: <span>Lorem, ipsum.</span></p>
-                <p>Email: <span>lorem.</span></p>
-            </div>
+        <div class="summary-content">
+            <p>Name: <span>Lorem, ipsum.</span></p>
+            <p>Email: <span>lorem.</span></p>
+        </div>
 
-            <div class="summary-content">
-                <p>Topics</p>
-                <ul>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                </ul>
-            </div>
+        <div class="summary-content">
+            <p>Topics</p>
+            <ul>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </div>
 
         <button>Confirm</button>
     </div>
@@ -79,22 +81,24 @@
     <div class="stepper">
         <div class="step-indication">
             <p>
-                Step <span id="current-step">2</span> of <span id="max-step">3</span>
+                Step <span id="current-step">1</span> of <span id="max-step">3</span>
             </p>
         </div>
 
         <div class="radio-wrapper">
-            <input id="stepper-1" name="step" type="radio" >
+            <input id="stepper-1" name="step" value="step-1" type="radio">
         </div>
 
         <div class="radio-wrapper">
-            <input id="stepper-2" name="step" type="radio" >
+            <input id="stepper-2" name="step" value="step-2" type="radio">
         </div>
 
         <div class="radio-wrapper">
-            <input id="stepper-3" name="step" type="radio" >
+            <input id="stepper-3" name="step" value="step-3" type="radio">
         </div>
     </div>
-    
+
+    <script src="./script.js"></script>
 </body>
+
 </html>

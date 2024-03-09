@@ -132,10 +132,10 @@ button {
     margin: auto;
 }
 
-#step-2,
+/* #step-2,
 #step-3 {
     display: none;
-}
+} */
 
 .stepper {
     display: flex;
