@@ -8,14 +8,14 @@ let emailVal = emailInput.value;
 
 nameInput.addEventListener('change', (e) => {
     nameVal = e.target.value;
+    console.log(nameVal);
 })
 
 emailInput.addEventListener('change', (e) => {
     emailVal = e.target.value;
+    console.log(emailVal);
 })
 
-console.log(nameVal);
-console.log(emailVal);
 
 const nameSpan = document.getElementById('name-span');
 const emailSpan = document.getElementById('email-span');
@@ -33,10 +33,11 @@ step3Form.hidden = true;
 const stepper1 = document.getElementById('stepper-1');
 stepper1.checked = true;
 const stepper2 = document.getElementById('stepper-2');
+stepper2.disabled = true;
 const stepper3 = document.getElementById('stepper-3');
+stepper3.disabled = true;
 
 const form1 = document.getElementById('step-1-form');
-
 const step1Button = document.getElementById('step-1-button');
 step1Button.addEventListener('click', (e) => {
     if (form1.checkValidity()) {
@@ -49,33 +50,20 @@ step1Button.addEventListener('click', (e) => {
 })
 
 const form2 = document.getElementById('step-2-form');
-let topic1Value = document.getElementById('topic-1-value');
+let topicVal = document.getElementById('topic-value');
 
 
 const radioGroup = document.getElementsByName('option');
 let selectedValue;
-const updateSpanText = () => {
-    for (const radio of radioGroup) {
-        if (radio.checked) {
-            selectedValue = radio.value;
-        }
-        // topic1Value.innerText = selectedValue;
-    }
-
-    // switch (selectedValue) {
-    //     case 'step-1':
-    //         break;
-    //     case 'step-2':
-    //         break;
-    //     case 'step-3':
-    //         break;
-    // }
+const updateTopicText = (e) => {
+    selectedValue = e.target.checked ? e.target.value : "Select a topic";
+    console.log(selectedValue)
 }
 
-// radioGroup.forEach((radio) => {
-//     radio.addEventListener('change', updateSpanText);
-
-// })
+for (let i = 0; i < radioGroup.length; i++) {
+    const radio = radioGroup[i];
+    radio.addEventListener('change', updateTopicText);
+}
 
 const step2Button = document.getElementById('step-2-button');
 step2Button.addEventListener('click', (e) => {
@@ -87,15 +75,16 @@ step2Button.addEventListener('click', (e) => {
         currentStep.innerText = "3";
         nameSpan.innerText = nameVal;
         emailSpan.innerText = emailVal;
-        topic1Value.innerText = selectedValue;
+        topicVal.innerText = selectedValue;
     } else {
         console.log("Validity check failed!");
     }
 })
 
 const confirmButton = document.getElementById('summary-confirm-button');
-confirmButton.addEventListener('click', () => {
+confirmButton.addEventListener('click', (e) => {
+    alert("SUCCESS!");
+    e.preventDefault();
     form2.submit();
     form2.reset();
-    alert("SUCCESS!");
 })
